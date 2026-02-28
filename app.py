@@ -3,7 +3,7 @@ import yfinance as yf
 from telegram import Update
 from telegram.ext import ApplicationBuilder, CommandHandler, MessageHandler, filters, ContextTypes
 
-TOKEN = "PASTE_YOUR_TELEGRAM_BOT_TOKEN_HERE"
+TOKEN = "8748280375:AAHvC6xJ-KTkies0XQF_dmBd98_m2sLxbDs"
 
 # Function to analyze stock
 def analyze_stock(symbol):
@@ -44,5 +44,6 @@ async def reply(update: Update, context: ContextTypes.DEFAULT_TYPE):
 
 app = ApplicationBuilder().token(TOKEN).build()
 app.add_handler(MessageHandler(filters.TEXT & ~filters.COMMAND, reply))
+
 
 app.run_polling()
